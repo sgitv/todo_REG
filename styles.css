@@ -1,0 +1,80 @@
+#login{
+	background-color: black;
+	width: 325px;
+	margin-left: 700px;
+	margin-top: 40px;
+	opacity: 0.1px;
+	background: rgba(0, 0, 0, 0.4);
+	background-position: top;
+	position:fixed;
+
+}
+#signup{
+	background-color: black;
+	width: 325px;
+	margin-top: 40px;
+	margin-left: 300px;
+	background: rgba(0, 0, 0, 0.4);
+	position:fixed;
+}
+div{
+	padding:5px;
+	border-radius: 10px;
+
+
+}
+input{
+	font-size: 15px;
+	list-style-type:none;
+	margin-top: 10px;
+	background: rgba(0, 0, 0, 0.1);
+	border: none;
+	color: white;
+	outline-style:none;
+	box-shadow:none;
+	border-bottom: 1px solid white;
+	width:320px;
+}
+.button{
+	border: none;
+}
+.button:hover{
+	box-shadow:0px 0px 10px white
+}
+body {
+    background-image: url("pp.jpg");
+    background-position: center top;
+    background-size: 130% auto;
+
+}
+
+.head{
+	color:white;
+	font-family: vardana;
+	font-style: arial;
+	font-size: 30px;
+}
+#new{
+	margin-left: 305px;
+	margin-top: -230px;
+}
+#log{
+	margin-left: 700px;
+	margin-top: -30px;
+}
+.success{
+	color:red;
+	opacity: 0.5;
+}
+.relog{
+	color:red;
+	opacity: 0.7;
+	
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
