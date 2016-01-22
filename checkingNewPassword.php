@@ -1,6 +1,5 @@
 <?php
 	require_once 'dbconnection.php';
-	require_once 'Classes.php';
 	session_start();
 	if($_SESSION['temp']!="")
 	{
@@ -12,13 +11,17 @@
 	
 	if($email == $_SESSION['temp']&&$password == $_SESSION['password'])
 	{
-		$change = new Compare($email,$password);
-		if($change->check())
+	
+	
+		$stmt = $db->prepare("SELECT * FROM users WHERE email=:email_id");
+		$stmt->execute(array(":email_id"=>$email));
+		$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+		if(($userRow['email'] === $email)&&($userRow['password'] === $password))
 		{	 
 			$doneQuery = $db->prepare("
 			UPDATE users 
 			SET password = :newPassword
-			WHERE email = :emailid" );											
+			WHERE email = :emailid" );											//strike out
 			$doneQuery->execute([":newPassword"=>$new,
 							":emailid"=>$email]);
 			$_SESSION['temp']="";

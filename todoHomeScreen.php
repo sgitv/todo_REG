@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+
 require_once 'dbconnection.php';
 session_start();
 if($_SESSION['temp']=="")
@@ -32,7 +32,7 @@ $items = $itemsQuery->rowCount()? $itemsQuery : [];
 			<a href="logout.php?logout">Log-out</a>
 		</div>
 		<div id ="innertool1">
-			<a href="changeView.php">Change-password</a>
+			<a href="changeView.php?logout">Change-password</a>
 		</div>
 	</div>
 	<body>

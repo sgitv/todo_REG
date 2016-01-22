@@ -18,7 +18,7 @@ if($_SESSION['temp'] == "")
 			<a href="logout.php?logout">Log-out</a>
 		</div>
 		<div id ="innertool1">
-			<a href="changeView.php">Change-password</a>
+			<a href="changeView.php?logout">Change-password</a>
 		</div>
 	</div>
 	<body>
