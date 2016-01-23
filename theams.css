@@ -22,7 +22,7 @@
  	border-radius: 2px;
  	box-shadow: 3px 3px 3px black;
  	margin-top: 25px;
- 	background: rgba(0, 0, 0, 0.1);
+ 	background: rgba(0, 0, 0, 0.5);
  }
  /* Items */
  .items {
@@ -41,13 +41,14 @@
  .items li,
  .item-add .input {
  	border:0;
- 	border-bottom: 1px solid white;
+ 	border-bottom: 1px dashed white;
  	padding: 15px 0;
  }
   
 .input {
 	width:100%;
 	background: rgba(0, 0 , 0, 0.1);
+	position: relative;
 }
  .done-button {
 
@@ -63,16 +64,19 @@
  }
  /* Submit button */
  .submit {
- background: rgba(0, 0 , 0, 0.6);
+ 
+    background: rgba( 0,100,100, 0.8);
  	padding: 5px 10px;
- 	width:100%;
+ 	width:30%;
  	margin-top: 10px;
  	box-shadow: 3px 3px 3px black;
- 	border:none;
+ 	border:1px solid white;
+ 	margin-left: 160px;
+ 	border-radius: 10px;
 
  }
  .submit:hover{
- 	background: rgba( 10, 0, 0, 0.8);
+ 	 background: rgba(0, 0 , 50, 0.9);
  }
  .color{
  	color:green;
@@ -81,33 +85,52 @@
  	height: 60px;
  	margin-top: -20px;
  	background-color: lightgreen;
+
  }
  #innertool{
- 	margin-top: 30px;
- 	margin-left: 1245px;
+ 	margin-top: 18px;
+ 	margin-left: 1240px;
  	background-color: skyblue;
  	width: 150px;
  	padding: 3px;
  	box-shadow: 0px 0px 5px black;
  	position:fixed;
+ 	border-radius: 10px;
 }
  #innertool1{
- 	margin-top: 30px;
+ 	margin-top: 18px;
  	margin-left: 960px;
  	background-color: skyblue;
  	width: 255px;
  	padding: 3px;
  	box-shadow: 0px 0px 5px black;
  	position:fixed;
+ 		border-radius: 10px;
 }
 #innertool:hover{
-	margin-top: 40px;
+	background-color: orange;
+	color: black;
 }
 #innertool1:hover{
-	margin-top: 40px;
+	background-color: orange;
+	color: black;
 }
  body{
  	background-image: url("aa.jpg");
     background-position: center top;
     background-size: 130% auto;
+ }
+ #welcome{
+ 	position: fixed;
+ 	margin-top: 19px;
+ 	margin-left: 50px;
+ 	color:white;
+
+ }
+ #dateField{
+ 	color:black;
+ 	width: 220px;
+ 	background: rgba(0, 0 , 0, 0.1);
+ 	border:0;
+ 	border-bottom: 1px dashed white;
  }

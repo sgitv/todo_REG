@@ -39,7 +39,7 @@
 	<span><p id="s6first" style="color:white;font-size:13px;"></p></span></td></tr>
 	
 	<tr><td><input type="submit" name="submit" value="sign-up" class="button" style="border:1px solid white;border-radius:5px"/></td>
-	<tr><td><h3 class="success" style="opacity: 0.9;margin"><?php echo "Email-Id Already exist! please signup with different one!"?></h3></td></tr>
+	<tr><td><h3 class="rechoose" style="opacity: 0.9"><?php echo "Email-Id Already exist! please signup with different one!"?></h3></td></tr>
 </form>
 
 </table>

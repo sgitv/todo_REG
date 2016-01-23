@@ -7,5 +7,12 @@
 	$delQuery->execute([
 		'id'=>$d
 	]);
+	$t = $_GET['user'];
+	$delQueryall = $db->prepare("
+		DELETE FROM items WHERE user = :id  
+	");										//Delete all
+	$delQueryall->execute([
+		'id'=>$t
+	]);
 	header('location: todoHomeScreen.php');
 ?>

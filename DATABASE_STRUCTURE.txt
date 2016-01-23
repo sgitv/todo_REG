@@ -1,0 +1,7 @@
+BD name = todo;
+
+tables  = items,users;
+
+items(TABLE) = id INT(11) A_I ,name TEXT,user INT(11) ,done TINYINT(1) ,created DATETIME;
+
+users(TABLE) = id INT(11) ,username VARCHAR(5),surname varchar(50),pnumber varchar(50), email varchar(50) unique,password varchar(50);

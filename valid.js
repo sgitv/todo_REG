@@ -59,16 +59,16 @@ function checklog()
 }
 function nameCheck()
 {
-	var input = document.getElementById("sfield1");
-	if(input.value.length < 3)
+	var input1 = document.getElementById("sfield1");
+	var tag = document.getElementById('sfirst');
+	if(input1.value.length < 3)
 	{
-		document.getElementById('sfirst').innerHTML = "Too Short"+" &#10008";
-		document.getElementById('sfirst').style.color = "red";
+		tag.innerHTML = "Too Short"+" &#10008";
+		tag.style.color = "red";
 	}
-	else
+	else 
 	{
-		document.getElementById('sfirst').innerHTML = "Ok"+" &#10004";
-		document.getElementById('sfirst').style.color = "lightgreen";
+		tag.innerHTML = "";
 
 	}
 
@@ -83,8 +83,7 @@ function surnameCheck()
 	}
 	else
 	{
-		document.getElementById('s2first').innerHTML = "Ok"+" &#10004";
-		document.getElementById('s2first').style.color = "lightgreen";
+		document.getElementById('s2first').innerHTML = "";
 
 	}
 
@@ -99,8 +98,7 @@ function numberCheck()
 	}
 	else
 	{
-		document.getElementById('s3first').innerHTML = "Valid number"+" &#10004";
-		document.getElementById('s3first').style.color = "lightgreen";
+		document.getElementById('s3first').innerHTML = "";
 
 	}
 
@@ -116,8 +114,7 @@ function emailCheck()
 	}
 	else
 	{
-		document.getElementById('s4first').innerHTML = "Valid email"+" &#10004";
-		document.getElementById('s4first').style.color = "lightgreen";
+		document.getElementById('s4first').innerHTML = "";
 
 	}
 
@@ -132,9 +129,7 @@ function passwordCheck()
 	}
 	else
 	{
-		document.getElementById('s5first').innerHTML = "Ok"+" &#10004";
-		document.getElementById('s5first').style.color = "lightgreen";
-
+		document.getElementById('s5first').innerHTML = "";
 	}
 
 }
@@ -166,9 +161,7 @@ function emailLCheck()
 	}
 	else
 	{
-		document.getElementById('l1first').innerHTML = "Valid email"+" &#10004";
-		document.getElementById('l1first').style.color = "lightgreen";
-
+		document.getElementById('l1first').innerHTML = "";
 	}
 
 }
@@ -182,9 +175,13 @@ function passwordLCheck()
 	}
 	else
 	{
-		document.getElementById('l2first').innerHTML = "Ok"+" &#10004";
-		document.getElementById('l2first').style.color = "lightgreen";
+		document.getElementById('l2first').innerHTML = "";
 
 	}
 
+}
+function deleteAll()
+{
+	var yesNo = confirm("Do you want to really delete all the list items?");
+	return yesNo;
 }

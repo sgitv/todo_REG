@@ -14,7 +14,7 @@
 		$lastname = $_POST['surname'];
 		$number = $_POST['number'];
 		$email = $_POST['email'];
-		$password = md5($_POST['password']);
+		$password = $_POST['password'];
 		
 		$stmt = $db->prepare("SELECT * FROM users WHERE email=:email_id");
 		$stmt->execute(array(":email_id"=>$email));
@@ -29,8 +29,7 @@
 			$query=$db->prepare($query);
 			$query->execute([
 				':username'=>$firstname,
-				':surname'=>$lastname,
-				
+				':surname'=>$lastname,			
 				':pnumber'=>$number,
 				':email'=>$email,
 				':password'=>$password
@@ -46,7 +45,7 @@
 	{
 		$email = $_POST['email'];
 		$password = $_POST['password'];
-		$stmt = $db->prepare("SELECT * FROM users WHERE email=:email_id " );
+		$stmt = $db->prepare("SELECT * FROM users WHERE email=:email_id");
 		$stmt->execute(array(":email_id"=>$email));
 		$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 		if(($userRow['email'] === $email)&&($userRow['password'] === $password))
