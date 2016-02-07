@@ -1,30 +1,43 @@
 <?php
 	session_start();
-	$_SESSION['temp'] = $email;
+	$_SESSION['temp'] = "";
 	$_SESSION['username_u'] = "";
 	$_SESSION['password_p'] = "";
 	$_SESSION['phone_n'] = "";
 
 	require_once 'dbconnection.php';
-	
-	
-	if(isset($_POST['submit']))
-	{
-		$firstname = $_POST['firstname'];
+	$e = $_POST['email'];
+	    $stmt1 = $db->prepare("SELECT * FROM users WHERE email=:email_id");
+		$stmt1->execute(array(":email_id"=>$e));
+		$userRow1=$stmt1->fetch(PDO::FETCH_ASSOC);
+		if($userRow1>0)
+		{
+			echo "email already taken";
+		}
+		else
+		{
+			echo "";
+		}
+
+
+
+ if(isset($_POST['sign-up']))
+ {
+ 	$firstname = $_POST['firstname'];
 		$lastname = $_POST['surname'];
 		$number = $_POST['number'];
 		$email = $_POST['email'];
 		$password = $_POST['password'];
-		
-		$stmt = $db->prepare("SELECT * FROM users WHERE email=:email_id");
-		$stmt->execute(array(":email_id"=>$email));
-		$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
-		if($userRow>0)
+	    $stmt1 = $db->prepare("SELECT * FROM users WHERE email=:email_id");
+		$stmt1->execute(array(":email_id"=>$email));
+		$userRow1=$stmt1->fetch(PDO::FETCH_ASSOC);
+		if($userRow1>0)
 		{
-			header('location:reChoosEmail.php');
+			echo "Email-Id Already exist! please signup with different one!";
 		}
 		else
 		{
+
 			$query = 'INSERT INTO users (username,surname,pnumber,email,password) VALUES(:username,:surname,:pnumber,:email,:password)';
 			$query=$db->prepare($query);
 			$query->execute([
@@ -35,15 +48,15 @@
 				':password'=>$password
 				]);
 			if($query){
-				header('location:regSuccessfull.php');	
+				echo "registered succesfull";
 			}
-			
-		}
 
-	}
-	else if(isset($_POST['login']))
+		}
+ }
+
+ if(isset($_POST['log-in']))
 	{
-		$email = $_POST['email'];
+		/*$email = $_POST['email'];
 		$password = $_POST['password'];
 		$stmt = $db->prepare("SELECT * FROM users WHERE email=:email_id");
 		$stmt->execute(array(":email_id"=>$email));
@@ -59,7 +72,8 @@
 		}
 		else
 		{
-			header('location:incorrectEmail&Password.php');
-		}
+			echo "Enter your Email and password correctly";
+		}*/
+		echo "connected!";
 	}	
 ?>  

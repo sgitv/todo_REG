@@ -25,7 +25,7 @@
 			$doneQuery->execute([":newPassword"=>$new,
 							":emailid"=>$email]);
 			$_SESSION['temp']="";
-			header('location:body.php');
+			header('location:index.php');
 		}
 		else
 		{

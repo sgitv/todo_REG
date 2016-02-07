@@ -21,7 +21,7 @@
  	padding: 20px;
  	border-radius: 2px;
  	box-shadow: 3px 3px 3px black;
- 	margin-top: 25px;
+ 	margin-top: 40px;
  	background: rgba(0, 0, 0, 0.5);
  }
  /* Items */
@@ -82,13 +82,14 @@
  	color:green;
  }
  #toolbar{
- 	height: 60px;
+ 	height: 70px;
  	margin-top: -20px;
- 	background-color: lightgreen;
-
+ 	background: rgba(0, 0, 0, 0.5);
  }
+
+
  #innertool{
- 	margin-top: 18px;
+ 	margin-top: 20px;
  	margin-left: 1240px;
  	background-color: skyblue;
  	width: 150px;
@@ -98,7 +99,7 @@
  	border-radius: 10px;
 }
  #innertool1{
- 	margin-top: 18px;
+ 	margin-top: 20px;
  	margin-left: 960px;
  	background-color: skyblue;
  	width: 255px;
@@ -122,9 +123,9 @@
  }
  #welcome{
  	position: fixed;
- 	margin-top: 19px;
- 	margin-left: 50px;
- 	color:white;
+ 	margin-top: 10px;
+ 	margin-left: 40px;
+ 	
 
  }
  #dateField{
@@ -134,3 +135,21 @@
  	border:0;
  	border-bottom: 1px dashed white;
  }
+ #imagechoose{
+
+ 	margin-top: 65px;
+ 	margin-left: 10px;
+ 	background: rgba(0, 0 , 0, 0.1);
+ }
+ #image{
+ 	margin-top: 5px;
+ 	margin-left: -30px;
+ 	border-radius: 100%;
+ }
+ #userLogName{
+ 	margin-top: -40px;
+ 	margin-left: 50px;
+ }
+ #image1{
+ 	margin-top: 5px;
+ 	margin-left: -60px;

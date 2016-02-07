@@ -1,7 +1,11 @@
 BD name = todo;
 
-tables  = items,users;
+
+tables  = items,users,images;
+
 
 items(TABLE) = id INT(11) A_I ,name TEXT,user INT(11) ,done TINYINT(1) ,created DATETIME,date DATETIME,edit TINYINT(1);
 
+
 users(TABLE) = id INT(11) ,username VARCHAR(5),surname varchar(50),pnumber varchar(50), email varchar(50) unique,password varchar(50);
+images(TABLE) = id INT(11),imagename VARCHAR(50),image LONGBLOB, edit TINYINT(1), id3 INT(50) autoincrement;

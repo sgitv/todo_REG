@@ -6,6 +6,6 @@ if(isset($_GET['logout']))
 	unset($_SESSION['temp']);
 	unset($_SESSION['user_id']);
 	unset($_SESSION['password']);
-	header('location: body.php');
+	header('location: index.php');
 }
 ?>

@@ -14,6 +14,7 @@ if($_SESSION['temp'] =="")
 		<link type="text/css" rel="stylesheet" href="styles.css">
 	</head>
 	<div id="toolbar">
+	<div id="welcome"><image src = "image.php" width="50" height = "50" id="image"><p id="userLogName"><span></span><?php echo $_SESSION['username'];?></p></div>
 		<div id ="innertool">
 			<a href="logout.php?logout">Log-out</a>
 		</div>
@@ -22,10 +23,7 @@ if($_SESSION['temp'] =="")
 		</div>
 	</div>
 	<body>
-	<div ><a href="#" id="userLogName"><span id = "welcome">Welcome!  </span><?php echo $_SESSION['username'];?></a>
-	<li><?php echo $_SESSION['temp'];?>
-	<li><?php echo $_SESSION['password'];?>
-	<li><?php echo $_SESSION['user_id'];?>
+	
 	</div>
 		<div class="di" id="signup" style="margin-top=-100px">
 <table>
